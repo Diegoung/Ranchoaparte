@@ -4,6 +4,20 @@ function PastEvents() {
   // Estado para filtrar las fotos por categoría
   const [filter, setFilter] = useState('todos');
 
+  // ✍️ EDITÁ ACÁ LOS TESTIMONIOS DE LOS CLIENTES
+  const testimonialsData = [
+    {
+      id: 1,
+      quote: "¡Excelente lugar! Los shows en vivo son espectaculares y la comida riquísima. Volvemos siempre.",
+      author: "- Juan Pablo R."
+    },
+    {
+      id: 2,
+      quote: "La mejor onda de Andino. Para meter peña, escuchar buena música y pasar un momento tremendo con amigos.",
+      author: "- María Luz G."
+    }
+  ];
+
   // 📝 Datos de la galería con enfoque conceptual e imágenes profesionales de stock
   const galleryData = [
     {
@@ -145,6 +159,29 @@ function PastEvents() {
           >
             Consultar por tu Evento
           </a>
+        </div>
+
+        {/* 💬 Sección: Lo que dicen nuestros clientes */}
+        <div className="mt-24 pt-12 border-t border-neutral-900">
+          <h3 className="text-3xl font-extrabold text-amber-500 text-center tracking-tight mb-12">
+            Lo que dicen nuestros clientes
+          </h3>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {testimonialsData.map((t) => (
+              <div 
+                key={t.id} 
+                className="bg-neutral-900/60 border border-neutral-800/60 p-8 rounded-2xl flex flex-col justify-between text-center"
+              >
+                <p className="text-neutral-300 italic text-base leading-relaxed">
+                  "{t.quote}"
+                </p>
+                <span className="text-amber-500 font-bold tracking-wide mt-6 block text-sm">
+                  {t.author}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>

@@ -4,7 +4,7 @@ import Events from './components/Events';
 import Menu from './components/Menu';
 import PastEvents from './components/PastEvents'; 
 import Reservation from './components/Reservation'; 
-import Footer from './components/Footer'; // 👈 1. Importamos el Footer acá
+import Footer from './components/Footer'; 
 
 function App() {
   return (
@@ -19,35 +19,16 @@ function App() {
       {/* 3. La carta de comidas y tragos */}
       <Menu />
 
-      {/* 4. Galería de recuerdos / Fotos de eventos pasados */}
+      {/* 4. Galería de recuerdos y Comentarios de clientes (Todo integrado acá adentro) */}
       <PastEvents />
 
-      {/* 5. COMENTARIOS DE CLIENTES */}
-      <section className="py-12 bg-neutral-900 text-center">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-amber-500 mb-8">Lo que dicen nuestros clientes</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Testimonio 1 */}
-            <div className="bg-neutral-950 p-6 rounded-lg border border-neutral-800 shadow-lg">
-              <p className="italic text-neutral-300">"¡Excelente lugar! Los shows en vivo son espectaculares y la comida riquísima. Volvemos siempre."</p>
-              <h4 className="mt-4 font-bold text-amber-500">- Juan Pablo R.</h4>
-            </div>
-            {/* Testimonio 2 */}
-            <div className="bg-neutral-950 p-6 rounded-lg border border-neutral-800 shadow-lg">
-              <p className="italic text-neutral-300">"La mejor onda de Rosario. Para meter peña, escuchar buena música y pasar un momento tremendo con amigos."</p>
-              <h4 className="mt-4 font-bold text-amber-500">- María Luz G.</h4>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Reservas y Ubicación */}
+      {/* 5. Reservas y Ubicación */}
       <Reservation /> 
 
-      {/* 7. BOTÓN DEL FOOTER */}
-      <Footer /> {/* 👈 2. Renderizamos el Footer acá abajo de todo */}
+      {/* 6. BOTÓN DEL FOOTER */}
+      <Footer /> 
 
-      {/* 8. BOTÓN FLOTANTE DE WHATSAPP */}
+      {/* 7. BOTÓN FLOTANTE DE WHATSAPP */}
       <a
         href="https://wa.me/5493415084112" 
         target="_blank"
