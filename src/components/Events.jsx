@@ -1,20 +1,10 @@
 import { useState } from "react";
 // 📸 Importamos tus imágenes locales desde la carpeta assets
-import imgGastonfer from "../assets/gastonfer.jpeg";
 import imgDiaAmigo from "../assets/dia-amigo.jpeg";
 import imgParrillada from "../assets/parrillada.jpeg";
 
 function Events() {
   const [shows] = useState([
-    {
-      id: 1,
-      title: "Especial Partido & Música en vivo de Gastonfer",
-      date: "Sábado 11 de Julio",
-      time: "Noche",
-      description: "¡Vení a mirar el partido con nosotros! Venite con algo celeste y blanco y festejamos con toda la música en vivo de Gastonfer. ¡Entrada libre y gratuita!",
-      badge: "Show en vivo",
-      image: imgGastonfer
-    },
     {
       id: 2,
       title: "Festejo Día del Amigo con 'La Borrachita'",
